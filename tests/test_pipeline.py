@@ -9,3 +9,7 @@ def test_pipeline_status_valid():
 def test_pipeline_status_invalid():
     output = pipeline.getPipelineStatus("Invalid")
     assert output is None
+
+def test_pipeline_status_valid_2():
+    output = pipeline.getPipelineStatus("Production")
+    assert output is not None
