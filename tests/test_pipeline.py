@@ -17,3 +17,8 @@ def test_pipeline_status_valid_2():
 def test_pipeline_status_valid_3():
     output = pipeline.getPipelineStatus("Test")
     assert output is not None
+
+def test_db_connect():
+    output = pipeline.connectDB()
+    print(output)
+    assert output is not None
