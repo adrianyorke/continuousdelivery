@@ -1,6 +1,16 @@
 def getPipelineStatus(env):
-    # return "Pipeline status : {} : Just perfect!".format(env)
-    return
+    environments = []
+    environments.append("Staging")
+    environments.append("Development")
+    environments.append("Test")
+    environments.append("Preproduction")
+    environments.append("Production")
+
+    if env in environments:
+        return "Pipeline status : {} : Just perfect!".format(env)
+    
+    return None
+
 
 if __name__ == "__main__":
     print(getPipelineStatus("Staging"))
