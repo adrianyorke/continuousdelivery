@@ -13,3 +13,7 @@ def test_pipeline_status_invalid():
 def test_pipeline_status_valid_2():
     output = pipeline.getPipelineStatus("Production")
     assert output is not None
+
+def test_pipeline_status_valid_3():
+    output = pipeline.getPipelineStatus("Test")
+    assert output is not None
