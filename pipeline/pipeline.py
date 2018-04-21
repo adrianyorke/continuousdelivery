@@ -1,3 +1,5 @@
+import sqlite3
+
 def getPipelineStatus(env):
     environments = []
     environments.append("Staging")
