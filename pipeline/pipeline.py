@@ -2,7 +2,7 @@ import sqlite3
 
 def connectDB():
     cur = sqlite3.connect(database="./devops_meta.db", isolation_level=None)
-    res = cur.execute("SELECT date('now');")
+    res = cur.execute("SELECT date('now'), time('now');")
     return res.fetchone()
 
 def getPipelineStatus(env):
@@ -19,7 +19,7 @@ def getPipelineStatus(env):
     return None
 
 def main():
-    connectDB()
+    print(connectDB())
 
 if __name__ == "__main__":
     #print(getPipelineStatus("Staging"))
